@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> 🍳CookGPT </title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>🍳CookGPT</h1>
+  </header>
+
+  <main class="container">
+    <!-- Left Column: Inputs -->
+    <section class="left-column">
+      <h2>Ingredients & Preferences</h2>
+
+      <label for="ingredients">Ingredients:</label>
+      <input id="ingredients" placeholder="e.g. eggs, potato, tomato" />
+
+      <div class="preferences">
+        <label><input type="checkbox" id="low_oil" /> Low oil</label>
+        <label><input type="checkbox" id="no_oven" /> No oven</label>
+        <label><input type="checkbox" id="no_airfryer" /> No air fryer</label>
+      </div>
+
+      <label for="time">Max cooking time (minutes):</label>
+      <select id="time">
+        <option value="10">10 minutes</option>
+        <option value="20">20 minutes</option>
+        <option value="30" selected>30 minutes</option>
+        <option value="40">40 minutes</option>
+        <option value="50">50 minutes</option>
+        <option value="60">60 minutes</option>
+      </select>
+      
+
+      <button onclick="getRecipe()">Get Recipe</button>
+    </section>
+
+    <!-- Right Column: Recipe Output -->
+    <section class="right-column">
+      <h2>Suggested Recipe</h2>
+
+      <div id="result" class="result-box">
+        <p id="placeholderText" class="placeholder-text">Your recipe will appear here.</p>
+        <div id="loader" class="hidden">⏳ Generating your recipe...</div>
+        <div id="recipeContent" class="result-text hidden"></div>
+      </div>
+
+      <!-- ✅ Listen Button (was missing before) -->
+       <div class="button-row"></div>
+        <button id="listenBtn" onclick="toggleSpeak()" style="display: none;">🔊 Listen</button>
+        <button id="downloadBtn" onclick="downloadRecipeImage()" style="display: none;">📸 Download Recipe Image</button>
+        </div>
+
+      <!-- ✅ Audio player for AI voice -->
+      <audio id="audioPlayer" controls style="display: none;"></audio>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

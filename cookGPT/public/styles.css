@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* ---------- Base Typography ---------- */
+body {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 18px;
+  background-color: #1d78e7;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-column {
+    flex: 1;
+    padding: 10px 20px 20px 20px; /* top, right, bottom, left */
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  .right-column {
+    flex: 2;
+    padding: 10px 20px 20px 20px;
+    background: #fffdf6;
+    border: 2px dashed #f3c623;
+    border-radius: 12px;
+  }
+
+/* ---------- Input & Form Styling ---------- */
+.left-column input[type="text"],
+.left-column input[type="number"],
+.left-column select,
+.left-column textarea {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Patrick Hand', cursive;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.left-column select:hover {
+  background-color: #fefae0;
+}
+
+/* ---------- Preferences Checkboxes ---------- */
+.preferences label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 10px 20px;
+    background-color: #f3c623; /* warm yellow */
+    color: #3e3e3e; /* dark readable text */
+    border: 2px solid #e6b800;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Patrick Hand', cursive;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #d9a400;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ffd447;
+    box-shadow: 0 2px 0 #d9a400;
+    transform: translateY(1px);
+  }
+  
+  button:active {
+    background-color: #f0b800;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+  .button-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  
+
+/* ---------- Recipe Result Box ---------- */
+.result-box {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+  
+
+.result-text {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+#result {
+  
+  
+    background: none;
+    border: none;
+    padding: 0;
+  
+  
+}
+
+#ingredients {
+    height: 80px;
+    padding: 12px;
+    font-size: 1.1em;
+    font-family: 'Patrick Hand', cursive;
+    border: 1px solid #ccc; /* match left column */
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+  }
+  
+
+  
+#result h3, 
+#result h4 {
+  font-weight: bold;
+  color: #c05b4d;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.placeholder-text {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+#loader {
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+  color: #888;
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- Sentence Highlight for TTS ---------- */
+.sentence.highlight {
+  background-color: #fff3a1;
+  padding: 2px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* ---------- Audio Controls ---------- */
+.audio-controls {
+  margin-top: 1rem;
+}
+
+.audio-controls label {
+  font-size: 0.95rem;
+  margin-left: 10px;
+}
+
+.right-column audio {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ---------- Diary Note Style ---------- */
+.diary-note {
+    background: #fff5e1;
+    border: 2px dashed #ffa07a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  }
+  
+
+.diary-note h3 {
+  color: #d2691e;
+  margin-top: 1.5em;
+}
+
+/* ---------- Utility ---------- */
+.hidden {
+  display: none;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
