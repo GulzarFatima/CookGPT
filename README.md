@@ -1,4 +1,4 @@
-# CookGPT
+# 🍳CookGPT
 
 CookGPT is a simple, interactive AI-powered recipe generator. Enter your available ingredients, select preferences, and get a custom recipe with clear instructions, optional voice narration, and a downloadable image version.
 
